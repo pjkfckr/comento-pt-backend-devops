@@ -1,0 +1,54 @@
+{
+  "executionRoleArn": "arn:aws:iam::640102795900:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/comento-pt-nestjs",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "command": [],
+      "cpu": 0,
+      "environment": [],
+      "ulimits": [
+        {
+          "name": "nofile",
+          "softLimit": 65535,
+          "hardLimit": 65535
+        }
+      ],
+      "volumesFrom": [],
+      "image": "640102795900.dkr.ecr.ap-northeast-2.amazonaws.com/comento-pt-nestjs",
+      "name": "nestjs"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "512",
+  "taskRoleArn": "arn:aws:iam::640102795900:role/ecsTaskExecutionRole",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:640102795900:task-definition/comento-pt-nestjs:7",
+  "family": "comento-pt-nestjs",
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "runtimePlatform": {
+    "operatingSystemFamily": "LINUX",
+    "cpuArchitecture": null
+  },
+  "cpu": "256",
+  "revision": 7,
+  "status": "ACTIVE",
+  "volumes": []
+}

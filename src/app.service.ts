@@ -11,7 +11,7 @@ export class AppService {
 
   getS3(): string {
     const s3 = this.S3.getInstance();
-    console.log(s3);
+    console.log(s3.config);
     return 'Hello S3';
   }
 }

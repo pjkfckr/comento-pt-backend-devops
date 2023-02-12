@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('s3')
+  getS3(): string {
+    return this.appService.getS3();
+  }
 }

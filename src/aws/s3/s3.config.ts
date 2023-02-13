@@ -1,9 +1,11 @@
 import * as AWS from 'aws-sdk';
 
-class S3Config {
-  getInstance() {
-    return new AWS.S3();
+export namespace S3Config {
+
+  const INSTANCE = new AWS.S3();
+
+  export function getInstance() {
+    return INSTANCE;
   }
 }
 
-export const AWS_S3 = new S3Config();
